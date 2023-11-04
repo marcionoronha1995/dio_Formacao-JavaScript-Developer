@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML - Forms</title>
+    <title>HTML - Forms - Javascript</title>
 </head>
 <body>
     <div>
@@ -16,6 +16,154 @@
             <input type="submit" value="Submit" onclick="minha_funcao()">
         </form>
     </div>
+    <div>
+        <h2>The select Element</h2>
+
+        <p>The select element defines a drop-down list:</p>
+        
+        <form action="">
+          <label for="cars">Choose a car:</label>
+          <select id="cars" name="cars">
+            <option value="Volvo">Volvo</option>
+            <option value="Saab">Saab</option>
+            <option value="Fiat">Fiat</option>
+            <option value="Audi">Audi</option>
+          </select>
+          <input type="submit" onclick="tela_Alerta()">
+        </form>
+        <p>A sua escolha foi </p><p id="escolha_Carro"></p>
+    </div>
+    <div>
+        <h2>Fieldset</h2>
+        <form action="/action_page.php">
+            <fieldset>
+              <legend>Personalia:</legend>
+              <label for="fname">First name:</label><br>
+              <input type="text" id="fname" name="fname" value="John"><br>
+              <label for="lname">Last name:</label><br>
+              <input type="text" id="lname" name="lname" value="Doe"><br><br>
+              <input type="submit" value="Submit">
+            </fieldset>
+          </form>
+    </div>
+    <br>
+    <br>
+    <div>
+        <h2>Data List</h2>
+        <form action="/action_page.php">
+            <input list="browsers" name="browser">
+            <datalist id="browsers">
+              <option value="Edge">
+              <option value="Firefox">
+              <option value="Chrome">
+              <option value="Opera">
+              <option value="Safari">
+            </datalist>
+            <input type="submit">
+          </form>
+          
+    </div>
+    <br><br>
+    <div>
+        <h2>The output elemento</h2>
+            <form action="/action_page.php" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                    0
+                    <input type="range"  id="a" name="a" value="20">
+                    100 +
+                    <input type="number" id="b" name="b" value="20">
+                    =
+                    <output name="x" for="a b"></output>
+                    <br><br>
+                    <input type="submit">
+            </form>
+    </div><br><br>
+    <div>
+        <h2>The action atribute</h2>
+        <form action="/action_page.php">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+            <input type="submit" value="Submit">
+          </form>
+    </div><br><br>
+    <div>
+        <h2>Tipos de imputs</h2>
+        <input action="">
+            <input type="button">button </input><br>
+            <input type="checkbox">checkbox </input><br>
+            <input type="color">color </input><br>
+            <input type="date">date </input><br>
+            <input type="datetime-local">datetime-local </input><br>
+            <input type="email">email </input><br>
+            <input type="file">file </input><br>
+            <input type="hidden">hidden </input><br>
+            <input type="image">image </input><br>
+            <input type="month">month </input><br>
+            <input type="number">number </input><br>
+            <input type="password">password </input><br>
+            <input type="radio">radio </input><br>
+            <input type="range">range </input><br>
+            <input type="reset">reset </input><br>
+            <input type="search">search </input><br>
+            <input type="submit">submit </input><br>
+            <input type="tel">tel </input><br>
+            <input type="text">text </input><br>
+            <input type="time">time </input><br>
+            <input type="url">url </input><br>
+            <input type="week">week</input><br>
+        </form>
+    </div>
+    <div>
+        <h1>Input Restrictionsbr</h1>
+        <br><p></p>
+        Here is a list of some common input restrictions:
+        <br><p></p>
+
+        Attribute	Descriptionbr
+        <br><p></p>
+        checked	Specifies that an input field should be pre-selected when the page loads (for type="checkbox" or type="radio")
+        <br><p></p>
+        disabled	Specifies that an input field should be disabled
+        <br><p></p>
+        max	Specifies the maximum value for an input field
+        <br><p></p>
+        maxlength	Specifies the maximum number of character for an input field
+        <br><p></p>
+        min	Specifies the minimum value for an input field
+        <br><p></p>
+        pattern	Specifies a regular expression to check the input value against
+        <br><p></p>
+        readonly	Specifies that an input field is read only (cannot be changed)
+        <br><p></p>
+        required	Specifies that an input field is required (must be filled out)
+        <br><p></p>
+        size	Specifies the width (in characters) of an input field
+        <br><p></p>
+        step	Specifies the legal number intervals for an input field
+        <br><p></p>
+        value	Specifies the default value for an input field
+        <br><p></p>
+        <h1>Exemplo</h1>
+        <form>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="10" max="100" step="10" value="30">
+          </form>
+          <br>
+          <form>
+            <label for="vol">Volume (between 0 and 50):</label>
+            <input type="range" id="vol" name="vol" min="0" max="50">
+          </form>
+          <br>
+          <form>
+            <label for="gsearch">Search Google:</label>
+            <input type="search" id="gsearch" name="gsearch">
+          </form>
+          <br>
+    </div>
+
+
     <script src="src/forms.js"></script>
+    <script src="src/tela_Alerta.js"></script>
 </body>
 </html>
